@@ -1,6 +1,14 @@
-export interface CloudScriptureConfig {
+import { InjectionToken } from '@angular/core';
+
+export class CloudScriptureConfig {
     apiKey: string;
+
+    constructor(apiKey: string) {
+        this.apiKey = apiKey;
+    }
 }
+
+export const CLOUD_SCRIPTURE_CONFIG = new InjectionToken<CloudScriptureConfig>('CLOUD_SCRIPTURE_CONFIG');
 
 export class DailyVerse {
     public book?: string;

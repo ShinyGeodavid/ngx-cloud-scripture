@@ -1,9 +1,31 @@
 {
   "name": "ngx-cloud-scripture",
-  "version": "0.0.1",
+  "version": "0.5.6",
   "peerDependencies": {
     "@angular/common": "^9.0.7",
     "@angular/core": "^9.0.7",
     "tslib": "^1.10.0"
-  }
+  },
+  "description": "Services for Angular projects wishing to accessing Cloud Scripture API.",
+  "author": "David Swanson",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShinyGeodavid/ngx-cloud-scripture.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ShinyGeodavid/ngx-cloud-scripture/issues"
+  },
+  "keywords": [
+    "angular",
+    "scripture",
+    "bible",
+    "verse of the day",
+    "daily",
+    "reading",
+    "javascript",
+    "typescript",
+    "services",
+    "ngx",
+    "cloud scripture"
+  ]
 }

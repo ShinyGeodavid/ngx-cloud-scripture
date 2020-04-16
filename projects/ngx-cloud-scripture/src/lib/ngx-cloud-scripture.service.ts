@@ -1,5 +1,5 @@
 import { Injectable, Inject } from '@angular/core';
-import { CloudScriptureConfig, DailyVerse, DailyReading } from './interfaces';
+import { CloudScriptureConfig, DailyVerse, DailyReading, CLOUD_SCRIPTURE_CONFIG } from './interfaces';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -10,7 +10,7 @@ export class NgxCloudScriptureService {
 
   private apiKey: string;
 
-  constructor(@Inject('config') config: CloudScriptureConfig, private http: HttpClient) {
+  constructor(@Inject(CLOUD_SCRIPTURE_CONFIG) private config: CloudScriptureConfig, private http: HttpClient) {
     this.apiKey = config.apiKey;
   }
 

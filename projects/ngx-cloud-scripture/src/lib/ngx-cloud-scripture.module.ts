@@ -1,6 +1,6 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { CloudScriptureConfig } from './interfaces';
+import { CloudScriptureConfig, CLOUD_SCRIPTURE_CONFIG } from './interfaces';
 import { NgxCloudScriptureService } from './ngx-cloud-scripture.service';
 
 
@@ -13,10 +13,10 @@ import { NgxCloudScriptureService } from './ngx-cloud-scripture.service';
   exports: []
 })
 export class NgxCloudScriptureModule {
-  public static forRoot(config: CloudScriptureConfig): ModuleWithProviders {
+  public static forRoot(config: CloudScriptureConfig): ModuleWithProviders<NgxCloudScriptureModule> {
     return {
       ngModule: NgxCloudScriptureModule,
-      providers: [NgxCloudScriptureService, {provide: 'config', useValue: config}]
+      providers: [NgxCloudScriptureService, {provide: CLOUD_SCRIPTURE_CONFIG, useValue: config}]
     };
   }
 }

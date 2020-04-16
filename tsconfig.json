@@ -14,7 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-cloud-scripture": [
+        "dist/ngx-cloud-scripture/ngx-cloud-scripture",
+        "dist/ngx-cloud-scripture"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
